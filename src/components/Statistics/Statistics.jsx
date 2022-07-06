@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Stats } from './Statistics.styled';
+import { Stats, Count } from './Statistics.styled';
 
 function Statistics({
   goodStat,
@@ -10,11 +10,11 @@ function Statistics({
 }) {
   return (
     <Stats>
-      <div>
+      <Count>
         <span> Good: {goodStat}</span>
         <span> Neutral: {neutralStat} </span>
         <span> Bad: {badStat} </span>
-      </div>
+      </Count>
       <span> Total: {totalFeedback} </span>
       <span> Positive feedback: {positivePercentage}% </span>
     </Stats>

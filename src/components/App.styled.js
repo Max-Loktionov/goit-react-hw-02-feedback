@@ -8,5 +8,5 @@ export const Container = styled.div`
 
   font-size: 20px;
   color: #010101;
-  background: #a596a5;
+  background: #6c696ca1;
 `;
