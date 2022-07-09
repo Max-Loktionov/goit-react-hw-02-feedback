@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Notification({ message }) {
   return (
     <div className="notif">
-      <span>There is no feedback</span>
+      <span>{message}</span>
     </div>
   );
 }

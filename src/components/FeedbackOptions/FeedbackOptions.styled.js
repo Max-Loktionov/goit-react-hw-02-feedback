@@ -10,10 +10,10 @@ export const BtnFeedback = styled.button`
   border-radius: 10px;
   outline: 1px solid gold;
   cursor: pointer;
+  text-transform: capitalize;
   :hover,
   :focus {
     background-color: #40f8f3;
-    // border: 4px solid gold;
     color: tomato;
   }
 `;

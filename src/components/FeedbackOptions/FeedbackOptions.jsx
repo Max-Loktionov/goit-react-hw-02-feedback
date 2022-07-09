@@ -1,19 +1,23 @@
 import PropTypes from 'prop-types';
 import { Options, BtnFeedback } from './FeedbackOptions.styled';
 
-function FeedbackOptions({ onGood, onNeutral, onBad }) {
+function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <Options>
-      <BtnFeedback onClick={onGood}>Good</BtnFeedback>
-      <BtnFeedback onClick={onNeutral}>Neutral</BtnFeedback>
-      <BtnFeedback onClick={onBad}>Bad</BtnFeedback>
+      {Object.keys(options).map(nameBtn => {
+        return (
+          <BtnFeedback name={nameBtn} onClick={onLeaveFeedback} key={nameBtn}>
+            {nameBtn}
+          </BtnFeedback>
+        );
+      })}
     </Options>
   );
 }
 
 FeedbackOptions.propTypes = {
-  onGood: PropTypes.func.isRequired,
-  onNeutral: PropTypes.func.isRequired,
-  onBad: PropTypes.func.isRequired,
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+  key: PropTypes.object,
 };
 export default FeedbackOptions;
