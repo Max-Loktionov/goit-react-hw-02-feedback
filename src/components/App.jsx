@@ -17,21 +17,7 @@ class App extends Component {
       [btnName]: prevState[btnName] + 1,
     }));
   };
-  // handleBtnGood = () => {
-  //   this.setState(prevState => ({
-  //     good: prevState.good + 1,
-  //   }));
-  // };
-  // handleBtnNeutr = () => {
-  //   this.setState(prevState => ({
-  //     neutral: prevState.neutral + 1,
-  //   }));
-  // };
-  // handleBtnBad = () => {
-  //   this.setState(prevState => ({
-  //     bad: prevState.bad + 1,
-  //   }));
-  // };
+
   countTotalFeedback = () => {
     return Object.values(this.state).reduce((total, item) => total + item, 0);
   };
@@ -49,8 +35,6 @@ class App extends Component {
           <FeedbackOptions
             options={this.state}
             onLeaveFeedback={this.onHandleButton}
-            // onNeutral={this.handleBtnNeutr}
-            // onBad={this.handleBtnBad}
           />
         </Section>
         <Section title="Statistics">
